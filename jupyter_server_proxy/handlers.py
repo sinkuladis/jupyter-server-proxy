@@ -725,7 +725,7 @@ def setup_handlers(web_app, serverproxy_config):
             (
                 url_path_join(
                     web_app.settings["base_url"],
-                    r"/proxy/([^/:@]+):(\d+)(/.*|)",
+                    r"/prox/([^/:@]+):(\d+)(/.*|)",
                 ),
                 RemoteProxyHandler,
                 {
@@ -737,7 +737,7 @@ def setup_handlers(web_app, serverproxy_config):
             (
                 url_path_join(
                     web_app.settings["base_url"],
-                    r"/proxy/absolute/([^/:@]+):(\d+)(/.*|)",
+                    r"/prox/absolute/([^/:@]+):(\d+)(/.*|)",
                 ),
                 RemoteProxyHandler,
                 {
@@ -749,7 +749,7 @@ def setup_handlers(web_app, serverproxy_config):
             (
                 url_path_join(
                     web_app.settings["base_url"],
-                    r"/proxy/(\d+)(/.*|)",
+                    r"/prox/(\d+)(/.*|)",
                 ),
                 LocalProxyHandler,
                 {
@@ -760,7 +760,7 @@ def setup_handlers(web_app, serverproxy_config):
             (
                 url_path_join(
                     web_app.settings["base_url"],
-                    r"/proxy/absolute/(\d+)(/.*|)",
+                    r"/prox/absolute/(\d+)(/.*|)",
                 ),
                 LocalProxyHandler,
                 {

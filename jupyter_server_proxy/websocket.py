@@ -95,7 +95,7 @@ class WebSocketHandlerMixin(websocket.WebSocketHandler):
 
 def setup_handlers(web_app):
     web_app.add_handlers('.*', [
-        (url_path_join(web_app.settings['base_url'], r'/proxy/(\d+)(.*)'), LocalProxyHandler)
+        (url_path_join(web_app.settings['base_url'], r'/prox/(\d+)(.*)'), LocalProxyHandler)
     ])
 
 # vim: set et ts=4 sw=4:
