@@ -204,9 +204,9 @@ class ProxyHandler(WebSocketHandlerMixin, JupyterHandler):
         if self.proxy_base:
             return url_path_join(self.base_url, self.proxy_base)
         if self.absolute_url:
-            return url_path_join(self.base_url, 'proxy', 'absolute', host_and_port)
+            return url_path_join(self.base_url, 'prox', 'absolute', host_and_port)
         else:
-            return url_path_join(self.base_url, 'proxy', host_and_port)
+            return url_path_join(self.base_url, 'prox', host_and_port)
 
     def get_client_uri(self, protocol, host, port, proxied_path):
         if self.absolute_url:
